@@ -1,0 +1,11 @@
+<%# app/views/quotes/create.turbo_stream.erb %>
+<%= turbo_stream.prepend "quotes", partial: "quotes/quote", locals: { quote: @quote } %>
+<%= turbo_stream.update Quote.new, "" %>
+<%= render_turbo_stream_flash_messages %>
+<%# 
+=begin
+In this view, we instruct Turbo to do two things:
+The first line tells Turbo to prepend to the Turbo Frame with id quotes the app/views/quotes/_quote.html.erb partial. As we can see, it's straightforward to pass a partial and locals to the turbo_stream helper.
+The second line tells Turbo to update the Turbo Frame with id new_quote with empty content.
+=end
+%>

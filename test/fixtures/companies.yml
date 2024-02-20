@@ -1,0 +1,7 @@
+# test/fixtures/companies.yml
+
+kpmg:
+  name: KPMG
+
+pwc:
+  name: PwC
